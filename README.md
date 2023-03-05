@@ -1,1 +1,3 @@
-# silviamaggiphotography-com
+# Silvia Maggi Photography website
+
+Public website.
