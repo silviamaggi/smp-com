@@ -52,6 +52,7 @@ keywords:
 # -------------------
 # Jekyll defaults
 # -------------------
+permalink: /:title/
 defaults:
   - scope:
       path: ''
@@ -69,9 +70,11 @@ plugins:
 # -------------------
 jekyll-archives:
   enabled:
+    - categories
     - tags
-  layout: tag
+  layout: archive
   permalinks:
+    category: '/albums/:name/'
     tag: '/tag/:name/'
   slug_mode: latin
   # date: 2021-08-15 13:45

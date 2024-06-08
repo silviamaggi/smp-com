@@ -2,7 +2,7 @@
 layout: default
 ---
 <article>
-  <h1>Tag: {{ page.title | upcase }}</h1>
+  <h1>{%- if page.type == "tag" -%}Tag: {% else %}Album: {% endif %}{{ page.title }}</h1>
   <div>
     {% for post in page.posts %}
     {% include pattern-postblock.html %}

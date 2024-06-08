@@ -1,0 +1,22 @@
+---
+layout: page
+title: Albums
+date: '2024-06-08 15:15:14'
+last_modified_at: '2024-06-08 20:27:44'
+description: ""
+excerpt: ""
+permalink: /albums/
+---
+<ul>
+  {%- assign cats = site.categories | sort %}
+  {%- for cat in cats %}
+  {%- assign catLast = cat | last %}
+  <li>
+    <a href="{{ cat | first | slugify }}/">{{ cat | first }},
+      {%- for post in catLast -%}
+      {%- if forloop.first %}{{ post.tags | first }}{% endif -%}
+      {% endfor -%}
+    </a>
+  </li>
+  {% endfor -%}
+</ul>
