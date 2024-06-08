@@ -1,11 +1,23 @@
 ---
-layout: page
-title: Silvia Maggi Photography
-date: '2023-03-05 22:17:24'
-last_modified_at: '2023-03-05 22:17:28'
+layout: default
+title: Home
+date: '2024-06-08 15:13:06'
+last_modified_at: '2024-06-08 17:21:47'
 ---
-<div class="h-entry">
-  <div class="e-content">
-    <p class="p-summary">Intro</p>
+<h1 class="visually-hidden">Silvia Maggi Photography</h1>
+<h2>{{ site.tagline }}</h2>
+<section>
+  <h3 class="p-name">Latest</h3>
+  {%- assign recentPosts = site.posts -%}
+  {%- for post in recentPosts limit:site.smp_latestposts_limit %}
+  <div>
+    {% if post -%}
+    {% include pattern-postblock.html %}
+    {% endif -%}
   </div>
-</div>
+  {%- endfor %}
+  <div>
+    <a href="{{ site.url }}/blog/" title="View all the photos"><span>View Film Roll&nbsp;&rarr;</span></a>
+  </div>
+</section>
+{% include last-update.liquid %}

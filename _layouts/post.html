@@ -1,3 +1,25 @@
 ---
 layout: default
 ---
+<article>
+  <h1>{{ page.title }}</h1>
+  <p>{{ page.description }}</p>
+  <figure>
+  	<img src="{{ site.url }}/assets/images/{{ page.featImage }}" alt="{{ page.featImageAlt }}" width="{{ page.featImageWidth }}" height="{{ page.featImageHeight }}">
+  	{%- if page.featCaption %}
+  	<figcaption>{{ page.featCaption }}</figcaption>
+  	{%- endif %}
+  </figure>
+  {{ content }}
+  <div>
+    {%- unless page.tags == empty -%}
+      {%- if post -%}
+        {%- assign tags = post.tags -%}
+        {%- else -%}
+        {%- assign tags = page.tags -%}
+      {%- endif -%}
+      <p>Tags:
+      {% for tag in tags %}<a href="{{ site.url }}/tag/{{ tag | slugify | append: '/' }}"><strong>{{ tag | upcase }}</strong></a>&nbsp;{% unless forloop.last %}{% endunless %}{% endfor %}</p>
+    {%- endunless -%}
+  </div>
+</article>

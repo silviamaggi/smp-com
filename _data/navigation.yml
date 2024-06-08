@@ -1,0 +1,11 @@
+menu:
+  - name: Home
+    link: /
+  - name: Film Roll
+    link: /filmroll/
+  - name: Albums
+    link: /albums/
+  - name: About
+    link: /about/
+  - name: Contact
+    link: /contact/

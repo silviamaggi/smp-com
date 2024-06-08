@@ -1,0 +1,18 @@
+# -------------------
+# SASS
+# -------------------
+sass:
+  style: compressed
+
+# -------------------
+# Inclusions
+# -------------------
+include: ["_pages", ".htaccess"]
+
+# -------------------
+# Exclusions
+# -------------------
+exclude:
+  - README.md
+  - /resume/
+  - /assets/css/main.css.map

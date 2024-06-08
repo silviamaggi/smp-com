@@ -1,0 +1,18 @@
+---
+layout: blog
+title: Film Roll
+date: '2024-06-08 15:15:14'
+last_modified_at: '2024-06-08 15:21:25'
+description: ""
+excerpt: ""
+permalink: /blog/
+---
+<section>
+  {% for post in site.posts %}
+    <div class="">
+      <ul>
+        <li class=""><strong><a href="{{ post.url }}">{{ post.title }}</a></strong><span class=""></p></li>
+      </ul>
+    </div>
+</section>
+{% endfor %}

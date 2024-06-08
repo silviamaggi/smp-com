@@ -1,0 +1,11 @@
+---
+layout: default
+---
+<article>
+  <h1>Tag: {{ page.title | upcase }}</h1>
+  <div>
+    {% for post in page.posts %}
+    {% include pattern-postblock.html %}
+    {% endfor %}
+  </div>
+</article>

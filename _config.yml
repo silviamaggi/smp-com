@@ -1,82 +1,84 @@
-host: "localhost"
-url: "https://silviamaggiphotography.com"
-baseurl: ""
-posts_limit: 20
+# -------------------
+# Site settings
+# -------------------
+host: 'localhost'
+url: 'https://silviamaggiphotography.com'
+baseurl: ''
+lang: 'en-GB'
+title: 'Silvia Maggi Photography'
+tagline: '“She stayed behind to take a picture”'
+timezone: Europe/London
+logo: '/assets/images/og-image.jpg'
+smp_latestposts_limit: 3
 
-title: Silvia Maggi
-tagline: 
-description: 
-permalink: /:categories/:title/
+# -------------------
+# Personal data
+# -------------------
+author:
+  name: 'Silvia Maggi'
+  givenName: 'Silvia'
+  familyName: 'Maggi'
+
+# -------------------
+# Profile
+# -------------------
+link:
+  - name: Email
+    label: hello@silviamaggidesign.com
+    url: mailto:hello@silviamaggidesign.com
+  - name: Personal Website
+    label: Silvia Maggi Design
+    url: https://silviamaggidesign.com
+
+# -------------------
+# Inclusions
+# -------------------
+include: ["_pages"]
+
+# -------------------
+# SASS
+# -------------------
+sass:
+  sass_dir: /assets/css/partials/
+  sourcemap: development
+
+# -------------------
+# About
+# -------------------
+description: ''
 keywords:
   photography
-timezone: Europe/Rome
-logo: /assets/images/smp-og-image.jpg
-author:
-  name: Silvia Maggi
-  email: hello@silviamaggidesign.com
 
-main:
-  smp_avatar_src: /assets/images/silviamaggi-avatar.png
-  smp_tagline: 'Tagline here'
-  smp_bio: 'Bio here'
-
-exclude: 
-  - README.md
-include: ["_pages", "_redirects"]
-
-# Defaults
+# -------------------
+# Jekyll defaults
+# -------------------
 defaults:
   - scope:
-      path: ""
-      type: "posts"
+      path: ''
     values:
-      is_post: true
-      layout: "post"
-  - scope:
-      path: ""
-    values:
-      layout: "default"
-  - scope:
-      path: ""
-      type: "collections"
-    values:
-      layout: "page"
+      layout: 'default'
 
-# Collections
-collections:
-  projects:
-    output: true
-    permalink: /projects/:path/
+# -------------------
+# Jekyll plugins
+# -------------------
+plugins:
+  - jekyll-archives
 
-# Taxonomy
+# -------------------
+# Jekyll archives
+# -------------------
 jekyll-archives:
   enabled:
-    - categories
     - tags
-  layout: archive
+  layout: tag
   permalinks:
     tag: '/tag/:name/'
-    category: '/category/:name/'
   slug_mode: latin
-  date: 2021-08-15 13:45
+  # date: 2021-08-15 13:45
 
-excerpt_separator: <!--more-->
-
-# Responsive images
-# responsive_image:
-#   template: _includes/pattern-responsive-image.html
-#   sizes:
-#     - width: 576
-#       quality: 80
-#     - width: 768
-#       quality: 80
-#     - width: 1200
-#       quality: 90
-#   strip: true
-#   output_path_format: assets/images/responsive/%{width}/%{basename}
-
-# Plugins
-plugins:
-  - jekyll-sitemap
-  - jekyll-archives
-  # - jekyll-responsive-image
+# -------------------
+# Markdown
+# -------------------
+kramdown:
+  syntax_highlighter_opts:
+    disable: true

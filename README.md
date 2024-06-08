@@ -1,3 +1,3 @@
 # Silvia Maggi Photography website
 
-Public website.
+The place where I post my pictures.
