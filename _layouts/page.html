@@ -7,4 +7,7 @@ layout: default
     <p>{{ page.description }}</p>
     {{ content }}
   </div>
+  {% if page.updated_on == true %}
+    <p>Updated on: {{ page.last_modified_at | date: "%-d %B %Y" }}</p>
+  {% endif %}
 </article>
