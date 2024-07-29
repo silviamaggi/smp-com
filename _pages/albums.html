@@ -12,7 +12,7 @@ permalink: /albums/
   {%- for cat in cats %}
   {%- assign catLast = cat | last %}
   <li>
-    <a href="{{ cat | first | slugify }}/">{{ cat | first }},
+    <a href="{{ cat | first | slugify }}/">{{ cat | first }},&nbsp;
       {%- for post in catLast -%}
       {%- if forloop.first %}{{ post.tags | first }}{% endif -%}
       {% endfor -%}
