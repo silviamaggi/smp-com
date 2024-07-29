@@ -77,7 +77,7 @@ jekyll-archives:
     category: '/albums/:name/'
     tag: '/tag/:name/'
   slug_mode: latin
-  # date: 2021-08-15 13:45
+  date: 2021-08-15 13:45
 
 # -------------------
 # Markdown
