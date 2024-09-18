@@ -4,20 +4,16 @@ title: Home
 date: '2024-06-08 15:13:06'
 last_modified_at: '2024-06-08 17:21:47'
 ---
-<h1 class="visually-hidden">Silvia Maggi Photography</h1>
-<h2>{{ site.tagline }}</h2>
 <section>
-  <h3 class="p-name">Latest</h3>
-  {%- assign recentPosts = site.posts -%}
-  {%- for post in recentPosts limit:site.smp_latestposts_limit %}
-  <div>
-    {% if post -%}
-    {% include pattern-postblock.html %}
-    {% endif -%}
+  <h2>Latest</h2>
+  <div class="album-items fullscreen">
+    <ul>
+      {%- assign recentPosts = site.posts -%}
+      {%- for post in recentPosts limit:site.smp_latestposts_limit %}
+      <li><a href="{{ site.url }}{{ post.url }}"><img src="{{ site.url }}/assets/images/{{ post.featImage }}" alt="{{ post.featImageAlt }}" width="{{ post.featImageWidth }}" height="{{ post.featImageHeight }}"></a></li>
+      {%- endfor %}
+    </ul>
   </div>
-  {%- endfor %}
-  <div>
-    <a href="{{ site.url }}/filmroll/" title="View all the photos"><span>View Film Roll&nbsp;&rarr;</span></a>
-  </div>
+  <a class="cta" href="{{ site.url }}/filmroll/" title="View all the photos"><span>View Film Roll&nbsp;&rarr;</span></a>
+  {% include last-update.liquid %}
 </section>
-{% include last-update.liquid %}

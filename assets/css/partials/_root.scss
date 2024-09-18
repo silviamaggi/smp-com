@@ -1,0 +1,40 @@
+:root {
+	// Typography
+	--font-sans: '#{$font-sans}', system-ui, sans-serif;
+	--font-serif: '#{$font-serif}', serif;
+	--font-mono: '#{$font-mono}', monospace;
+	@if $theme == false {
+		// Colours
+		--color-day: #fff;
+		--color-night: #000;
+		--color-light: #f3f3f3;
+		--color-day-transparent: rgba(255,255,255,0.5);
+		--color-transparent: rgba(230,230,230,0.5);
+		--color-accent: #CCCCFF;
+		--color-extra: #FFFFCC;
+		--color-text: #454545;
+		--color-text-light: #585858;
+		--color-text-dark: #000;
+		--color-link: #666666;
+		--color-linkover: #8be9Fd;
+		--color-linkovervisited: #CCCCFF;
+		--color-border: #d9d9d9;
+		--color-highlight: 242,241,175;
+		--color-disabled: #efefef;
+		--color-shadow: 0, 0, 0;
+		// Spacing
+		--border-radius-standard: 0.5rem;
+		--border-radius-double: 1rem;
+		--nav-gap: 2rem;
+	}
+}
+// ----------------------------------------
+// Dark theme
+// ----------------------------------------
+// @media (prefers-color-scheme: dark) {
+// 	:root {}
+// 	img,
+// 	video {
+// 		opacity: 0.8;
+// 	}
+// }

@@ -1,0 +1,369 @@
+html {
+	scroll-behavior: smooth;
+}
+body {
+	min-height: 100vh;
+	font-family: var(--font-serif);
+	font-size: calc(1rem + 0.4vw);
+	color: var(--color-text);
+}
+
+// -------------------------------- *\
+// Accessibility skip links
+// -------------------------------- */
+.skip-links {
+	margin-block-end: 2rem;
+	a {
+		&:first-child {
+			padding-inline-end: 1rem;
+		}
+	}
+}
+
+// -------------------------------- *\
+// $PAGE
+// -------------------------------- */
+body > header,
+body > main,
+body > footer {
+	padding-inline: calc(1rem + 2vw);
+}
+body > header {
+	margin-block: 4rem;
+	text-align: center;
+}
+main > * + * {
+	margin-block-start: 4rem;
+}
+body > footer {
+	background: var(--color-transparent);
+	margin-block-start: 4rem;
+	padding-block: 2rem;
+}
+
+// -------------------------------- *\
+// $SECTIONS
+// -------------------------------- */
+aside {
+	> * + * {
+		margin-block-start: 2rem;
+	}
+	> h2,
+	> h3,
+	> h4,
+	> h5,
+	> h6,
+	+ p {
+		margin-block-start: 0;
+	}
+}
+section {
+	> * + * {
+		margin-block-start: 1.5rem;
+	}
+	+ h2,
+	+ h3,
+	+ h4,
+	+ h5,
+	+ h6 {
+		margin-block-start: 0;
+	}
+}
+// article {}
+
+// -------------------------------- *\
+// $HEADINGS
+// -------------------------------- */
+// Size
+h2 { font-size: calc(1.8rem + 0.25vw) }
+h3 { font-size: calc(1.4rem + 0.25vw) }
+h4 { font-size: calc(1.3rem + 0.25vw) }
+h5 { font-size: calc(1.2rem + 0.25vw) }
+h6 { font-size: calc(1.1rem + 0.25vw) }
+// Colour
+h2, h3, h4, h5, h6 {
+	color: var(--color-day);
+}
+// Spacing
+h3, h4, h5, h6 {
+	margin-block-start: 3rem;
+	text-align: center;
+}
+// Stylings
+h4 {
+	font-variant: small-caps;
+	text-transform: lowercase;
+	letter-spacing: 2px;
+}
+h5, h6 {
+	font-style: italic;
+	font-weight: normal;
+}
+
+// -------------------------------- *\
+// $LINKS
+// -------------------------------- */
+a {
+	color: var(--color-day);
+	text-decoration-color: var(--color-link);
+	text-decoration-thickness: 2px;
+	text-underline-offset: 0.1rem;
+	&:hover {
+		text-decoration-thickness: 3px;
+		text-decoration-color: var(--color-linkover);
+	}
+	&:focus-visible,
+	&:active {
+		outline: 3px solid var(--color-day);
+	}
+}
+
+// -------------------------------- *\
+// $NAVIGATION
+// -------------------------------- */
+nav[aria-label="Main navigation"] {
+	// Nav layout
+	// display: flex;
+	// align-items: center;
+	// justify-content: center;
+	margin-block-end: 2.5rem;
+	// Nav list
+	ul {
+		// display: flex;
+		// flex-wrap: wrap;
+		// column-gap: calc(var(--nav-gap) + 0.390625vw);
+		list-style-type: none;
+		padding-inline-start: 0;
+		li {
+			display: inline-block;
+			margin-inline: 0.75rem;
+			line-height: 2.5rem;
+			// &:after {
+			// 	display: inline-block;
+			// 	content: '/';
+			// 	padding-inline-start: 1rem;
+			// 	font-size: larger;
+			// 	color: var(--color-border)
+			// }
+		}
+	}
+	// Nav links
+	a {
+		font-variant: small-caps;
+		text-transform: lowercase;
+		letter-spacing: calc(1px + 0.15vw);
+		color: var(--color-text);
+		text-decoration: none;
+		&:hover {
+			color: var(--color-text-light);
+			cursor: pointer;
+			text-decoration: underline;
+			text-decoration-thickness: 2px;
+		}
+	}
+}
+nav[aria-label="Footer navigation"] {
+	margin-block: 1.5rem;
+	// Nav list
+	ul {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		list-style-type: none;
+		padding-inline-start: 0;
+		li {
+			font-family: var(--font-sans);
+			font-size: calc(0.85rem + 0.25vw);
+		}
+	}
+}
+
+// -------------------------------- *\
+// $CONTENT
+// -------------------------------- */
+// Paragraphs
+// -------------------------------- */
+footer p {
+	margin-block-start: 1rem;
+}
+
+// -------------------------------- */
+// Spans
+// -------------------------------- */
+.tagline {
+	text-align: center;
+}
+
+// -------------------------------- */
+// Imagery
+// -------------------------------- */
+img {
+	main & {
+		height: auto;
+	}
+}
+img + em {
+	display: block;
+	font-family: var(--font-serif);
+	font-size: 1rem;
+	text-align: left;
+	color: var(--color-text-light);
+	margin-top: 0.8rem;
+	margin-bottom: 3rem;
+}
+figure {
+	overflow-x: auto;
+	img {
+		min-width: 100%;
+	}
+}
+figcaption {
+	font-style: italic;
+	color: var(--color-text-light);
+	margin-block-start: 1rem;
+}
+// -------------------------------- *\
+// Lists
+// -------------------------------- */
+main ul {
+	list-style-type: circle;
+	> * + * {
+		margin-block-start: 0.5rem;
+	}
+}
+// ol {}
+dt {
+	font-weight: bold;
+	color: var(--color-text-light);
+}
+dd {
+	margin-block-start: 0.25rem;
+	margin-block-end: 1.5rem;
+	padding-inline-start: 1.5rem;
+}
+// -------------------------------- *\
+// Code elements
+// -------------------------------- */
+code,
+pre,
+kbd,
+samp {
+	font-family: var(--font-mono);
+	color: var(--color-night);
+}
+kbd {
+	border: 1px solid var(--color-text-light);
+	border-bottom: 3px solid var(--color-text-light);
+	border-radius: var(--color-border-radius-standard);
+	padding: 0 0.4rem;
+}
+pre {
+	max-width: 100%;
+	overflow: auto;
+	margin: 2rem 0;
+	padding: 1rem;
+	border: 1px solid var(--color-border);
+	border-radius: 1rem;
+}
+pre code {
+	margin: 0;
+	padding: 0;
+	background: transparent;
+}
+pre span {
+	font-family: var(--font-mono);
+}
+// -------------------------------- *\
+// Quotes
+// -------------------------------- */
+blockquote > p {
+	font-style: italic;
+	width: calc(85% + 0.390625vw);
+	margin-block-start: 1.5rem;
+	padding-inline-start: 1rem;
+	border-inline-start: 2px solid var(--color-border);
+}
+cite {
+	display: block;
+	font-style: normal;
+	margin-block-start: 0.35rem;
+	&:before {
+		content: '– ';
+	}
+}
+// -------------------------------- *\
+// Accordion
+// -------------------------------- */
+details {
+	margin-bottom: 1rem;
+}
+summary {
+	cursor: pointer;
+	font-weight: bold;
+	font-variant: small-caps;
+	text-transform: lowercase;
+	letter-spacing: 1px;
+	word-break: break-all;
+}
+// details[open] > summary + * {}
+// details[open] > summary {}
+// -------------------------------- *\
+// Table
+// -------------------------------- */
+table {
+	border-collapse: collapse;
+	margin: 2rem 0;
+	min-width: 100%;
+}
+td,
+th {
+	text-align: left;
+	padding: 0.5rem;
+	border-top: 1px solid var(--color-border);
+	border-bottom: 1px solid var(--color-border);
+}
+th,
+tr:nth-child(even) {
+	background-color: var(--color-transparent);
+}
+table caption {
+	font-weight: bold;
+	margin-bottom: 0.5rem;
+}
+// -------------------------------- *\
+// Inline elements
+// -------------------------------- */
+abbr[title] {
+	cursor: help;
+	text-decoration-line: underline;
+	text-decoration-style: dotted;
+}
+time {
+	@extend %dim;
+	@extend %small;
+}
+mark {
+	color: var(--color-night);
+	padding: 2px 4px;
+	background-color: var(--color-extra);
+}
+sup, sub {
+	vertical-align: baseline;
+	position: relative;
+	padding-inline: 3px;
+}
+sup {
+	top: -0.4rem;
+}
+sub { 
+	top: 0.3rem; 
+}
+// -------------------------------- *\
+// Separator
+// -------------------------------- */
+hr {
+	border: none;
+	height: 1px;
+	background: var(--color-border);
+	margin: 2rem auto;
+}

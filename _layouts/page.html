@@ -1,13 +1,7 @@
 ---
 layout: default
 ---
-<article>
-  <h1>{{ page.title }}</h1>
-  <div>
-    <p>{{ page.description }}</p>
-    {{ content }}
-  </div>
-  {% if page.updated_on == true %}
-    <p>Updated on: {{ page.last_modified_at | date: "%-d %B %Y" }}</p>
-  {% endif %}
-</article>
+<section>
+  <h2>{{ page.title }}</h2>
+</section>
+{{ content }}

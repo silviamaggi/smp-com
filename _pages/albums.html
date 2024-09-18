@@ -7,16 +7,41 @@ description: ""
 excerpt: ""
 permalink: /albums/
 ---
-<ul>
-  {%- assign cats = site.categories | sort %}
-  {%- for cat in cats %}
-  {%- assign catLast = cat | last %}
-  <li>
-    <a href="{{ cat | first | slugify }}/">{{ cat | first }},&nbsp;
-      {%- for post in catLast -%}
-      {%- if forloop.first %}{{ post.tags | first }}{% endif -%}
-      {% endfor -%}
-    </a>
-  </li>
-  {% endfor -%}
-</ul>
+{% comment %}
+==================================================================
+- Usare la stessa logica degli album-categoria
+- Iterare nei tags
+- Decidere i 3 featured tags in config
+- Pull della featured image dell'ultimo post che fa parte del tag
+- Ripetere il loop 3 volte (3 tags)
+==================================================================
+<div class="featured-section">
+  <h3>On the coffee table</h3>
+  <div class="album-items fullscreen">
+    <ul>
+      {%- assign featured = site.posts | where: 'coffeeTable', 'true' -%}
+      {%- for post in featured limit:site.smp_latestposts_limit %}
+      <li><a href="{{ post.url }}"><img src="{{ site.url }}/assets/images/{{ post.featImage }}" alt="{{ post.featImageAlt }}"></a></li>
+      {%- endfor %}
+    </ul>
+  </div>
+</div>
+{% endcomment %}
+<div class="album-items">
+  <ul>
+    {%- assign cats = site.categories | sort %}
+    {%- for cat in cats %}
+    {%- assign catLast = cat | last %}
+    <li>
+      <a href="{{ cat | first | slugify }}/"><span>{{ cat | first }},&nbsp;
+        {%- for post in catLast -%}
+        {%- if forloop.first %}{{ post.tags | first }}</span>{% endif -%}
+        {%- if forloop.first %}
+        <img src="{{ site.url }}/assets/images/{{ post.featImage }}" alt="{{ post.featImageAlt }}">
+        {% endif -%}
+        {% endfor -%}
+      </a>
+    </li>
+    {% endfor -%}
+  </ul>
+</div>

@@ -8,7 +8,8 @@ lang: 'en-GB'
 title: 'Silvia Maggi Photography'
 tagline: '“She stayed behind to take a picture”'
 timezone: Europe/London
-logo: '/assets/images/og-image.jpg'
+logo: '/assets/images/smp-logo.svg'
+brand: '/assets/images/smp-og-image.jpg'
 smp_latestposts_limit: 3
 
 # -------------------
@@ -29,6 +30,9 @@ link:
   - name: Personal Website
     label: Silvia Maggi Design
     url: https://silviamaggidesign.com
+  - name: GitHub
+    label: GitHub profile
+    url: https://github.com/silviamaggi
 
 # -------------------
 # Inclusions
@@ -45,7 +49,7 @@ sass:
 # -------------------
 # About
 # -------------------
-description: ''
+description: 'Silvia is an amateur photographer. Enjoy her pictures!'
 keywords:
   photography
 

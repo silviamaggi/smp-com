@@ -1,0 +1,27 @@
+/*!
+ * Description: Personal SCSS minimalistic skeleton
+ * Author:      Simone Silvestroni, Cambridge
+ * Author URI:  https://minutestomidnight.co.uk
+ * Version:     2.0
+ **/
+
+// -------------------------------- */
+// Components
+// -------------------------------- */
+$webfonts:	true;
+$theme:			true;
+$print:			false;
+
+// -------------------------------- */
+// Main
+// -------------------------------- */
+$line-height:	1.5;
+
+// -------------------------------- */
+// Grid
+// -------------------------------- */
+$grid-gap:									3rem;
+$grid-centre-width:					52rem;
+$grid-repeat-col-min-width:	22.5rem;
+$grid-global-cols:					12;
+$grid-global-min-col:				30rem;
