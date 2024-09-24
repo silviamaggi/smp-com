@@ -9,22 +9,19 @@ layout: none
     <description>{{ site.description | strip_html | xml_escape }}</description>
     <link>{{ site.url }}</link>
     <language>{{ site.lang }}</language>
-    <copyright>{{ site.url }}/colophon/#copyright</copyright>
+    <copyright>{{ site.time | date: "%Y" }} All rights reserved.</copyright>
     <atom:link href="{{ site.url }}/feed.xml" rel="self" type="application/rss+xml" />
-    {%- assign projects = site.documents | where:"layout", "project" -%}
-    {%- assign blog = site.posts -%}
-    {%- assign posts = projects | concat: blog | sort: 'date' | reverse -%}
-    {%- for post in posts limit:site.posts_limit %}
+      {%- for post in site.posts limit:site.posts_limit %}
       <item>
         <title>{{ post.title | xml_escape }}</title>
         <author>{{ site.author.email }} ({{ site.author.name }})</author>
         <description><![CDATA[
-          {% unless post.url contains '/notes/' %}
-          {{ post.excerpt }}
-          <hr>
-          {% endunless %}
-          {{ post.content }}
-          <hr><p><a href="mailto:{{ site.author.email }}?subject={{ post.title | uri_escape }}">Reply via email</a></p>]]>
+          <figure>
+            <img src="{{ site.url }}/assets/images/{{ post.featImage }}" alt="{{ post.featImageAlt }}" width="{{ page.featImageWidth }}" height="{{ post.featImageHeight }}">
+          </figure>
+          <br>{{ post.description }}
+          <br>{{ post.content }}
+          <hr><p><a href="mailto:{{ site.author.email }}?subject={{ post.title | uri_escape }}">Reply via email</a></p]]>
         </description>
         <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
         <link>{{ site.url }}{{ post.url }}</link>
