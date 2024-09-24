@@ -11,6 +11,7 @@ timezone: Europe/London
 logo: '/assets/images/smp-logo.svg'
 brand: '/assets/images/smp-og-image.jpg'
 smp_latestposts_limit: 3
+posts_limit: 20
 
 # -------------------
 # Personal data
@@ -19,6 +20,7 @@ author:
   name: 'Silvia Maggi'
   givenName: 'Silvia'
   familyName: 'Maggi'
+  email: hello@silviamaggidesign.com
 
 # -------------------
 # Profile
