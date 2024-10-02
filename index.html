@@ -8,7 +8,7 @@ last_modified_at: '2024-06-08 17:21:47'
   <h2>Latest</h2>
   <div class="album-items fullscreen">
     <ul>
-      {%- assign recentPosts = site.posts -%}
+      {%- assign recentPosts = site.posts | sort: 'last_modified_at' | reverse -%}
       {%- for post in recentPosts limit:site.smp_latestposts_limit %}
       <li><a href="{{ site.url }}{{ post.url }}"><img src="{{ site.url }}/assets/images/{{ post.featImage }}" alt="{{ post.featImageAlt }}" width="{{ post.featImageWidth }}" height="{{ post.featImageHeight }}"></a></li>
       {%- endfor %}

@@ -9,7 +9,7 @@ tags:
   - Marina di Ravenna
   - sea
 description: "A couple seated on a bench in front of a cruise ship docked on the other side of the canal"
-featImage: '20160506-marina_2730.webp'
+featImage: '20160506_marina-2730.webp'
 featImageAlt: 'A couple seated on a bench overlooking a cruise ship docked on the other side of the canal'
 featImageWidth: '959'
 featImageHeight: '1440'

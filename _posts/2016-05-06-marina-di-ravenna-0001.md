@@ -9,7 +9,7 @@ tags:
   - Marina di Ravenna
   - sea
 description: "Molo Dalmazia in Marina di Ravenna"
-featImage: '20160506-marina_2688.webp'
+featImage: '20160506_marina-2688.webp'
 featImageAlt: 'Lamposts, benches and people on the pier overlooking the sea'
 featImageWidth: '1440'
 featImageHeight: '959'

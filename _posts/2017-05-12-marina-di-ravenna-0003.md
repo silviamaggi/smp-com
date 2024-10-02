@@ -9,7 +9,7 @@ tags:
   - Marina di Ravenna
   - sea
 description: "A wave crashing on the pier at Diga Foranea Sud in Marina di Ravenna"
-featImage: '20170512-marina_4447.webp'
+featImage: '20170512-marina-4447.webp'
 featImageAlt: 'A wave crashing on the pier on a stormy day'
 featImageWidth: '1440'
 featImageHeight: '959'

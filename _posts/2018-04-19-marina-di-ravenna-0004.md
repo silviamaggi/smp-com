@@ -9,7 +9,7 @@ tags:
   - Marina di Ravenna
   - architecture
 description: "A green wooden window shutter and wall scarred by time"
-featImage: '20180419-marina-2395.webp'
+featImage: '20180419_marina-2395.webp'
 featImageAlt: 'A green wooden window shutter and wall scarred by time'
 featImageWidth: '963'
 featImageHeight: '1440'
