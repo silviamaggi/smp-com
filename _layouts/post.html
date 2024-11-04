@@ -6,8 +6,8 @@ layout: default
   <figure class="fullscreen">
     <img src="{{ site.url }}/assets/images/{{ page.featImage }}" alt="{{ page.featImageAlt }}" width="{{ page.featImageWidth }}" height="{{ page.featImageHeight }}">
   </figure>
-  {{ content }}
   <p>{{ page.shotOn | date: "%-d %B %Y" }}</p>
+  {{ content }}
   {%- unless page.tags == empty -%}
   {%- if post -%}
     {%- assign tags = post.tags -%}
