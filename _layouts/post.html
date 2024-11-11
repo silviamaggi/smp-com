@@ -7,6 +7,7 @@ layout: default
     <img src="{{ site.url }}/assets/images/{{ page.featImage }}" alt="{{ page.featImageAlt }}" width="{{ page.featImageWidth }}" height="{{ page.featImageHeight }}">
   </figure>
   <p>{{ page.shotOn | date: "%-d %B %Y" }}</p>
+  <p><a href="{{ site.url }}/assets/images/{{ page.featImage }}" target="_blank" title="Opens in a new tab">See fullscreen</a></p>
   {{ content }}
   {%- unless page.tags == empty -%}
   {%- if post -%}
